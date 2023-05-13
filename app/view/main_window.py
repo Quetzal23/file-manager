@@ -28,31 +28,27 @@ class MainWindow(QMainWindow):
     def _init_constants(self):
         self._app = QApplication.instance()
 
-        window_lang = LANG_DIR
-        window_text = LANG_DIR + 'default.txt'
-        window_css = CSS_DIR + 'styles.qss'
-        window_font = FONT_DIR
-
-        self._setup_translation(window_lang)
-        self._setup_text_widgets(window_text)
-        self._setup_styles(window_css, window_font)
+        self._window_lang = LANG_DIR
+        self._window_text = LANG_DIR + 'default.txt'
+        self._window_css = CSS_DIR + 'styles.qss'
+        self._window_font = FONT_DIR
 
 
-    def _setup_translation(self, window_lang):
-        translation = EstablishedTranslation('file-manager', window_lang, 'default')
+    def _setup_translation(self):
+        translation = EstablishedTranslation('file-manager', self._window_lang, 'default')
         translator = QTranslator()
         translator.load(translation.gettext())
         self._app.installTranslator(translator)
 
 
-    def _setup_text_widgets(self, window_text):
+    def _setup_text_widgets(self):
         text_widgets = EstablishedText()
-        text_widgets.load_file_text(window_text)
+        text_widgets.load_file_text(self._window_text)
 
 
-    def _setup_styles(self, window_css, window_font):
-        stylesheet = EstablishedStylesheet(window_css)
-        font_family = EstablishedFont(window_font)
+    def _setup_styles(self):
+        stylesheet = EstablishedStylesheet(self._window_css)
+        font_family = EstablishedFont(self._window_font)
 
         self._app.setStyleSheet(stylesheet.stylesheet())
         for f in font_family.get_font_families():
@@ -63,6 +59,10 @@ class MainWindow(QMainWindow):
     def _init_ui(self):
         self.setContentsMargins(0, 0, 0, 0)
         self.setObjectName("")
+
+        self._setup_translation()
+        self._setup_text_widgets()
+        self._setup_styles()
 
         self.setup_ui()
         self.update_screen_size()
