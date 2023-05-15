@@ -1,9 +1,9 @@
-from app.controller.file_explorer_controller import FileExplorerController
+from app.controller.explorer_controller import ExplorerController
 
 
 if __name__ == '__main__':
 	try:
-		controller = FileExplorerController()
+		controller = ExplorerController()
 		controller.run()
 		pass
 	except Exception as e:

@@ -93,4 +93,5 @@ class MainWindow(QMainWindow):
 
 
     def set_central_widget(self, widget: QtWidgets):
+        widget.setContentsMargins(0, 0, 0, 0)
         self.setCentralWidget(widget)

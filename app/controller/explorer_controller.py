@@ -2,20 +2,20 @@ import sys
 
 from PyQt5.QtWidgets import ( QApplication, )
 
-from app.view.central_widget import CentralWidget
+from app.view.explorer_view import ExplorerWidget
 from app.view.main_window import MainWindow
 
 
-class FileExplorerController:
+class ExplorerController:
     def __init__(self):
         self.app = QApplication.instance() or QApplication(sys.argv)
-        self.main_window = MainWindow()
+        self._main_window = MainWindow()
         self._init_constants()
         self._init_controller()
 
 
     def run(self):
-        self.main_window.show()
+        self._main_window.show()
         sys.exit(self.app.exec_())
 
 
@@ -24,5 +24,5 @@ class FileExplorerController:
 
 
     def _init_controller(self):
-        central_widget = CentralWidget()
-        self.main_window.set_central_widget(central_widget)
+        explorer = ExplorerWidget()
+        self._main_window.set_central_widget(explorer)
