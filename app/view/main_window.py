@@ -1,12 +1,11 @@
+from PyQt5 import QtWidgets
 from PyQt5.QtGui import (
     QFont,
     QResizeEvent,
 )
 from PyQt5.QtCore import ( QTranslator, )
 from PyQt5.QtWidgets import (
-    QWidget,
     QMainWindow,
-    QVBoxLayout,
     QApplication,
     QDesktopWidget,
 )
@@ -70,13 +69,7 @@ class MainWindow(QMainWindow):
 
 
     def setup_ui(self):
-        self.central_layout = QVBoxLayout()
-        self.central_layout.setContentsMargins(0, 0, 0, 0)
-        central_widget = QWidget()
-        central_widget.setContentsMargins(0, 0, 0, 0)
-        central_widget.setObjectName("")
-        central_widget.setLayout(self.central_layout)
-        self.setCentralWidget(central_widget)
+        pass
 
 
     def update_screen_size(self):
@@ -97,3 +90,7 @@ class MainWindow(QMainWindow):
         if self.isMaximized:
             self.screen_geometry()
         super().resizeEvent(event)
+
+
+    def set_central_widget(self, widget: QtWidgets):
+        self.setCentralWidget(widget)
