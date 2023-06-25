@@ -1,0 +1,48 @@
+{
+    "sidebarExplorer": [
+        {
+            "icon": "document-open-recent-symbolic-svgrepo-com.svg",
+            "text": "recent_label"
+        },
+        {
+            "icon": "non-starred-symbolic-svgrepo-com.svg",
+            "text": "starred_label"
+        },
+        {
+            "icon": "user-home-symbolic-svgrepo-com.svg",
+            "text": "home_label"
+        },
+        {
+            "icon": "user-desktop-symbolic-svgrepo-com.svg",
+            "text": "desktop_label"
+        },
+        {
+            "icon": "folder-download-symbolic-svgrepo-com.svg",
+            "text": "download_label"
+        },
+        {
+            "icon": "document-open-recent-symbolic-svgrepo-com.svg",
+            "text": "document_label"
+        },
+        {
+            "icon": "folder-pictures-symbolic-svgrepo-com.svg",
+            "text": "picture_label"
+        },
+        {
+            "icon": "folder-music-symbolic-svgrepo-com.svg",
+            "text": "music_label"
+        },
+        {
+            "icon": "folder-videos-symbolic-svgrepo-com.svg",
+            "text": "video_label"
+        },
+        {
+            "icon": "user-trash-symbolic-svgrepo-com.svg",
+            "text": "trash_label"
+        },
+        {
+            "icon": "add-svgrepo-com.svg",
+            "text": "other_location"
+        }
+    ]
+}

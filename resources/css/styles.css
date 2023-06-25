@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'DM Sans';
+    src: url("{{ get_font_path('DMSans-Regular.ttf') }}");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url("{{ get_font_path('DMSans-Bold.ttf') }}");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url("{{ get_font_path('DMSans-BoldItalic.ttf') }}");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url("{{ get_font_path('DMSans-Italic.ttf') }}");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DM Sans Medium';
+    src: url("{{ get_font_path('DMSans-Medium.ttf') }}");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans Medium';
+    src: url("{{ get_font_path('DMSans-MediumItalic.ttf') }}");
+    font-weight: normal;
+    font-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'DM Sans';
+    font-size: 14px;
+    line-height: 40px;
+    color: #333;
+}
+*:focus { outline-offset: -2px; }

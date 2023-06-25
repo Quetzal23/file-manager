@@ -1,10 +1,20 @@
-from app.controller.explorer_controller import ExplorerController
+import logging
+import sys
+
+from src.controller.application_controller import AplicationController
+
+
+def main():
+    # Instancia del controlador e iniciar la aplicacion
+    application_controller = AplicationController()
+    application_controller.run()
 
 
 if __name__ == '__main__':
-	try:
-		controller = ExplorerController()
-		controller.run()
-		pass
-	except Exception as e:
-		input(f"Exception: {e}\nPress any key for continue ...")
+    # Configuración del registro de errores
+    logging.basicConfig(filename='error.log', level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
+
+    try:
+        main()
+    except Exception as error:
+        logging.exception(f"Exception: {error}")
