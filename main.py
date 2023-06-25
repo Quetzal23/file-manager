@@ -1,5 +1,4 @@
 import logging
-import sys
 
 from src.controller.application_controller import AplicationController
 

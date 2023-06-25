@@ -5,6 +5,7 @@ class MainController:
         self.main_controller = main_window
         self.app_controller = app_controller
 
+
     def close(self):
         pass
 
