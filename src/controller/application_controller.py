@@ -19,7 +19,7 @@ class AplicationController:
         # para iniciar la aplicacion
         self.app = QApplication(sys.argv)
         self.main_window = MainWindow()    # Intancia de la ventana principal
-        self.init_controller()
+        self.init_controller()  # Instancias de los controladores
 
         # LLamando el evento de cierre de ventana de la aplicacion
         self.main_window.closeEvent = self.close
